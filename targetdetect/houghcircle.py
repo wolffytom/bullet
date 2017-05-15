@@ -5,7 +5,7 @@ image = cv2.imread('../target.png')
 output = image.copy()
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # detect circles in the image
-circles = cv2.HoughCircles(gray, cv2.cv.CV_HOUGH_GRADIENT, 1.2, 0,minRadius=0, maxRadius=200)
+circles = cv2.HoughCircles(gray, cv2.cv.CV_HOUGH_GRADIENT, 1.5, 10,minRadius=80, maxRadius=100)
  
 # ensure at least some circles were found
 if circles is not None:
@@ -14,6 +14,7 @@ if circles is not None:
  
 	# loop over the (x, y) coordinates and radius of the circles
 	for (x, y, r) in circles:
+                print(x,' ',y,' ',r,' ')
 		# draw the circle in the output image, then draw a rectangle
 		# corresponding to the center of the circle
 		cv2.circle(output, (x, y), r, (0, 255, 0), 4)

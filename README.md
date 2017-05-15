@@ -7,3 +7,4 @@ sudo apt-get install python-opencv
 
 # circle detection
 http://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html?highlight=houghcircle#houghcircles
+https://rdmilligan.wordpress.com/2015/03/01/road-sign-detection-using-opencv-orb/
